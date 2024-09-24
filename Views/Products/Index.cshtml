@@ -1,14 +1,21 @@
 ﻿@model List<Product>
 @{
+   
 }
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
 <div class="text-center mb-4">
-    <h2>List of Products</h2>
+    <p class="h1 text-uppercase">List of Products</p>
 </div>
 
 <div class="row mb-4">
-    <div class="col">
-        <a class="btn btn-primary" asp-controller="Products" asp-action="Create">New Product</a>
+    <div class="flex-column col-auto">
+        <a class="btn btn-dark" asp-controller="Products" asp-action="Create">New Product</a>
     </div>
 </div>
 
@@ -16,8 +23,8 @@
     <div class="row">
         @foreach (var product in Model)
         {
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div class="card h-100 rounded-2">
+            <div class="col-lg-3 col-md-3 col-sm-12 mb-4">
+                <div class="card h-100 rounded-4">
                     <img src="products/@product.ImageFileName" class="card-img-top" alt="Image of @product.Name" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>

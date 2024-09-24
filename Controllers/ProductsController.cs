@@ -61,6 +61,9 @@ namespace Watch.Controllers
             context.Products.Add(product);
             context.SaveChanges();
 
+            TempData["SuccessMessage"] = "Product created successfully!";
+
+
             return RedirectToAction("Index", "Products");
         }
 
@@ -127,6 +130,8 @@ namespace Watch.Controllers
             product.ImageFileName = newFileName;
 
             context.SaveChanges();
+
+            TempData["SuccessMessage"] = "Product updated successfully!";
             return RedirectToAction("Index", "Products");
 		}
 
@@ -146,7 +151,9 @@ namespace Watch.Controllers
 
             context.Products.Remove(product);
             context.SaveChanges(true);
-			return RedirectToAction("Index", "Products");
+
+            TempData["SuccessMessage"] = "Product deleted successfully!";
+            return RedirectToAction("Index", "Products");
 		}
 
 	}

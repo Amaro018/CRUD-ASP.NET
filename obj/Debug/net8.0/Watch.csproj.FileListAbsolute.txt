@@ -134,3 +134,4 @@ D:\Try ASP\Watch\Watch\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.
 D:\Try ASP\Watch\Watch\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Try ASP\Watch\Watch\obj\Debug\net8.0\Watch.csproj.AssemblyReference.cache
 D:\Try ASP\Watch\Watch\obj\Debug\net8.0\Watch.csproj.Up2Date
+D:\Try ASP\Watch\Watch\obj\Debug\net8.0\Watch.sourcelink.json
